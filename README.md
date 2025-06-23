@@ -1,18 +1,34 @@
+# Aplicație pentru achiziționarea și gestionarea biletelor la cinema
 
-Aplicatie pentru achizitionarea biletelor la film si gestionarea acestuia.
+Acest proiect este o aplicație simplă, dezvoltată în cadrul materiei **Programare Orientată pe Obiect (POO)**, care permite achiziționarea biletelor la film și gestionarea rezervărilor.
 
--am inceput prin a declara 3 clase:Persoana, Film si Cinema
+## Funcționalități și structură
 
--in interiorul acestora am declarat toate variabilele de care aveam nevoie private
+- **Clase principale:**  
+  - `Persoana`  
+  - `Film`  
+  - `Cinema`  
+  Toate variabilele au fost declarate ca private pentru a asigura încapsularea datelor.
 
--am apelat pe urma functia introducere pentru a-mi afisa mesajul de inceput ce face parte din meniu
+- **Meniu de interacțiune:**  
+  O funcție `introducere` afișează un mesaj și meniul principal.
 
--am continuat cu o functie ce ajuta la alegerea tipului de cinema dorit si afisarea acestuia cu ajutorul operatorilor >> si <<; de asemenea, am realizat si un constructor de copiere pentru obiectul c2
+- **Selectarea tipului de cinema:**  
+  Funcții pentru alegerea și afișarea tipului de cinema folosind operatorii supraincarcați `>>` și `<<`.  
+  A fost implementat și un constructor de copiere pentru obiectul `Cinema`.
 
--am supraincarcat operatorii '-' si '<' pentru a calcula daca nr de bilete alese este mai mic decat maximul de bilete pe sala(50), in acest sens, afisand nr de bilete ramase
+- **Gestionarea biletelor:**  
+  Operatorii `-` și `<` au fost supraincarcați pentru a verifica dacă numărul de bilete selectate este mai mic decât capacitatea maximă a sălii (50 bilete), afișând biletele rămase disponibile.  
+  Biletele selectate sunt stocate într-un vector `sala`, unde fiecare bilet rezervat este marcat cu valoarea 1.
 
--cu ajutorul functiei stocare_bilete am atribuit unui vector numit sala valoarea 1 pentru fiecare bilet selectat
+- **Afișarea detaliilor rezervării:**  
+  Prin utilizarea mai multor metode și a unei funcții `friend`, se afișează un meniu final cu detaliile rezervării curente.
 
--prin intermediul ultimelor 4 functii si a functiei friend am afisat un meniu final care ne ofera detalii despre rezervarea noastra
+- **Extensibilitate:**  
+  În final, este oferită opțiunea de a citi un număr `n` de obiecte (rezervări), permițând efectuarea mai multor rezervări consecutive prin modificarea codului în `main`.
 
--in final(marcat ca si mesaj), am pus optiunea de citire a n obiecte care poate fi folosita comentand toate lucrurile de care ne am folosit acum pana in main si utilizand variabilele n si display_menu pentru a face cate n rezervari dorim.
+## Cum se folosește
+
+Pentru a testa aplicația:  
+- Se poate utiliza meniul interactiv pentru o singură rezervare.  
+- Pentru multiple rezervări, se poate activa citirea mai multor obiecte în funcția `main`, folosind variabilele `n` și `display_menu`.
